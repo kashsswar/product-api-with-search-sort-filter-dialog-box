@@ -1,0 +1,311 @@
+/* productList.css */
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+li h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+li p {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.buttons button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+.add-button {
+  margin-top: 20px;
+}
+.pagination button[disabled] {
+  background-color: #888888; /* Change the color to a desired disabled color */
+  cursor: not-allowed; /* Change the cursor to "not-allowed" */
+  /* Additional styling if needed */
+}
+.add-button button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.add-button button:hover {
+  background-color: #1a682f;
+}
+
+.loading {
+  font-style: italic;
+  color: #999;
+}
+
+.error {
+  color: #dc3545;
+}
+/* Existing styles */
+
+.page-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items-per-page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align to the right */
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.items-per-page label,
+.items-per-page select,
+.items-per-page span {
+  margin-left: 10px; /* Add some space between elements */
+}
+
+/* Additional styles for the "Filter" section */
+
+.filter-button {
+  margin-bottom: 10px;
+}
+
+.filter-button button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-button button:hover {
+  background-color: #0056b3;
+}
+
+.filter-tunnel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-tunnel button {
+  margin: 5px;
+}
+
+
+/* Styles for mobile screens */
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  li {
+    border: 1px solid #1bf18a;
+  }
+
+  li h2 {
+    font-size: 16px;
+  }
+
+  li p {
+    font-size: 14px;
+  }
+
+  .buttons button {
+    font-size: 14px;
+  }
+
+  .add-button button {
+    font-size: 16px;
+  }
+
+  .filter-button button {
+    font-size: 16px;
+  }
+
+  .search-input {
+    width: 150px;
+    font-size: 14px;
+  }
+}
+
+/* Styles for tablet screens */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .container {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  li {
+    border: 1px solid #fd732d;
+  }
+
+  li h2 {
+    font-size: 18px;
+  }
+
+  li p {
+    font-size: 16px;
+  }
+
+  .buttons button {
+    font-size: 16px;
+  }
+
+  .add-button button {
+    font-size: 18px;
+  }
+
+  .filter-button button {
+    font-size: 18px;
+  }
+
+  .search-input {
+    width: 200px;
+    font-size: 14px;
+  }
+}
+
+/* Styles for laptop screens */
+@media only screen and (min-width: 901px) {
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  li h2 {
+    font-size: 22px;
+  }
+
+  li p {
+    font-size: 18px;
+  }
+
+  .buttons button {
+    font-size: 18px;
+  }
+
+  .add-button button {
+    font-size: 20px;
+  }
+
+  .filter-button button {
+    font-size: 20px;
+  }
+
+  .search-input {
+    width: 200px;
+    font-size: 16px;
+  }
+}
+
+/* Styles for pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px; /* Adjust the margin for pagination buttons */
+  background-color: #e27058;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #c56043;
+}
+
+.pagination button:active {
+  background-color: #f25bc5;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+}
+
+@media only screen and (max-width: 600px) {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0; /* Adjust the margin for the entire pagination container */
+  }
+
+  .pagination button {
+    /* Remove margin for pagination buttons in smaller screens */
+    margin: 0 2px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .pagination button {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .pagination button {
+    font-size: 18px;
+  }
+}
